@@ -1,0 +1,48 @@
+<section id="pokemon-list">
+	<div *ngIf="isLoading" class="spinner-wrapper">
+		<mat-spinner></mat-spinner>
+	</div>
+	<div *ngIf="isLoading === false" class="pokemon-list__wrapper-outer">
+		<div class="pokemon-list__wrapper-inner">
+			<div class="choose-view-buttons__wrapper">
+				<mat-button-toggle-group
+					class="choose-view-buttons"
+					name="choose-view-buttons"
+					aria-label="Choose View"
+				>
+					<mat-button-toggle
+						value="grid"
+						(click)="toggleCardView(false)"
+					>
+						<mat-icon
+							aria-hidden="false"
+							aria-label="Grid"
+							fontIcon="window"
+						></mat-icon>
+					</mat-button-toggle>
+					<mat-button-toggle
+						value="cards"
+						(click)="toggleCardView(true)"
+					>
+						<mat-icon
+							aria-hidden="false"
+							aria-label="Cards"
+							fontIcon="lists"
+						></mat-icon>
+					</mat-button-toggle>
+				</mat-button-toggle-group>
+			</div>
+			<app-grid
+				[dataSource]="dataSource"
+				*ngIf="!isCardViewSelected"
+			></app-grid>
+			<ng-container *ngFor="let pokemon of dataSource">
+				<app-card
+					*ngIf="isCardViewSelected"
+					[@cardAnimation]
+					[pokemon]="pokemon"
+				></app-card>
+			</ng-container>
+		</div>
+	</div>
+</section>

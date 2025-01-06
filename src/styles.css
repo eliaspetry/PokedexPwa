@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body,
+#app-root {
+	height: 100%;
+}
+
+body {
+	margin: 0;
+	font-family: Roboto, "Helvetica Neue", sans-serif;
+	background-image: url("../public/images/clouds.svg");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+a {
+	text-decoration: inherit;
+	color: inherit;
+	outline: none;
+}
+
+#app-root {
+	display: flex;
+	flex-direction: column;
+
+	main {
+		flex-grow: 1;
+	}
+}

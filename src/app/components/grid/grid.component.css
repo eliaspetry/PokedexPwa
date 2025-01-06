@@ -1,0 +1,17 @@
+table {
+	background: rgba(255, 255, 255, 0.25);
+
+	* {
+		color: black;
+		text-align: center;
+	}
+
+	img {
+		width: 96px;
+		height: 96px;
+	}
+
+	td {
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,79 @@
+.pokemon-details-card__wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.pokemon-details-card {
+	background-color: rgba(255, 255, 255, 0.65);
+	align-items: center;
+	text-align: center;
+
+	.mat-mdc-card-title {
+		font-weight: bold;
+		letter-spacing: 0.08rem;
+		font-size: 2rem;
+		color: rgb(58, 58, 58);
+	}
+
+	img {
+		width: 96px;
+		height: auto;
+	}
+}
+
+.go-back-button-wrapper {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	width: 100%;
+
+	button {
+		margin-right: 1rem;
+		margin-top: 1rem;
+		background-color: rgb(255, 70, 70);
+		color: white;
+		border-radius: 0.4rem;
+
+		&:hover {
+			background-color: rgb(243, 0, 0);
+		}
+	}
+}
+
+.pokemon-stats__wrapper {
+	p {
+		text-align: left;
+	}
+}
+
+.stat-bar {
+	--mdc-linear-progress-active-indicator-height: 0.7rem;
+	--mdc-linear-progress-track-height: 0.7rem;
+}
+
+.stat-bar--hp {
+	--mdc-linear-progress-active-indicator-color: lightgreen;
+}
+
+.stat-bar--attack {
+	--mdc-linear-progress-active-indicator-color: lightcoral;
+}
+
+.stat-bar--special-attack {
+	--mdc-linear-progress-active-indicator-color: red;
+}
+
+.stat-bar--defense {
+	--mdc-linear-progress-active-indicator-color: lightyellow;
+}
+
+.stat-bar--special-defense {
+	--mdc-linear-progress-active-indicator-color: yellow;
+}
+
+.stat-bar--speed {
+	--mdc-linear-progress-active-indicator-color: lightcyan;
+}
